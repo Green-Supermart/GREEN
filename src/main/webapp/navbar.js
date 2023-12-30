@@ -67,10 +67,10 @@ function navbarHTML() {
     
     html += '<div id="userDropdown" class="userDropdown">';
     html += '<a id="accountSettingsLink" href="/getUserData">Account Settings</a>';
-    html += '<a id="ordersLink" href="http://localhost:8090/orders.jsp">Orders</a>';
-    html += '<a id="helpCenterLink" href="http://localhost:8090/helpCenter.jsp">Help Center</a>';
-    html += '<a id="registerLink" href="http://localhost:8090/register.jsp">Register</a>';
-    html += '<a id="loginLink" href="http://localhost:8090/login.jsp">Login</a>';
+    html += '<a id="ordersLink" href="/orders.jsp">Orders</a>';
+    html += '<a id="helpCenterLink" href="/helpCenter.jsp">Help Center</a>';
+    html += '<a id="registerLink" href="/register.jsp">Register</a>';
+    html += '<a id="loginLink" href="/login.jsp">Login</a>';
     html += '<a id="logoutLink" onclick="logout()" href="/index.jsp">Log Out</a>';
     html += '</div>';
     
@@ -200,7 +200,7 @@ searchBox.addEventListener('submit', function(event) {
 
     var searchQuery = searchField.value;
     if (searchQuery !== '') {
-        window.location.href = 'search?q=' + searchQuery;
+        window.location.href = '/search?q=' + searchQuery;
     }
 });
 

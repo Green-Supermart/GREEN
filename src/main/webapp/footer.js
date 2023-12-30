@@ -27,14 +27,14 @@ function footerHTML() {
     html += '<div class="footerContent flex flexRow">';
     html += '<div class="footerLinks flex flexCol">';
     html += '<h1>Support</h1>';
-    html += '<a href="helpCenter.jsp">Help Center</a>';
-    html += '<a href="returnPolicy.jsp">Return Policy</a>';
+    html += '<a href="/helpCenter.jsp">Help Center</a>';
+    html += '<a href="/returnPolicy.jsp">Return Policy</a>';
     html += '</div>';
     
     html += '<div class="footerLinks flex flexCol">';
     html += '<h1>Legal</h1>';
-    html += '<a href="privacyPolicy.jsp">Privacy Policy</a>';
-    html += '<a href="termsConditions.jsp">Terms & Conditions</a>';
+    html += '<a href="/privacyPolicy.jsp">Privacy Policy</a>';
+    html += '<a href="/termsConditions.jsp">Terms & Conditions</a>';
     html += '</div>';
     
     html += '<div class="footerLinks flex flexCol">';
