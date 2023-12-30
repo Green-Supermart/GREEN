@@ -1,0 +1,43 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 20 Dec 2023, 16:33:37
+    Author     : Sandun
+*/
+
+.cartItem{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 70px;
+    width: 100%;
+}
+
+.cartItem .cartItemAction p{
+    display: block;
+    font-size: 12px;
+    transition: 0.3s;
+}
+.cartItem .cartItemAction i{
+    display: none;
+    color: #1DA31A;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+
+.cartItem:hover .cartItemAction p{
+    display: none;
+    transition: 0.3s;
+}
+.cartItem:hover .cartItemAction i{
+    display: block;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cartItem .cartItemAction i:hover{
+    color: #a31a1a;
+    transition: 0.3s;
+}

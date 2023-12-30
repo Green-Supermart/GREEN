@@ -1,0 +1,76 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 16 Dec 2023, 09:58:09
+    Author     : Sandun
+*/
+
+.prevSlide{
+    justify-content: center;
+    align-items: center;
+    width: 8%;
+    height: 85%;
+    background: #ECECEC;
+    border-radius: 10px 0 0 10px;
+    filter: drop-shadow(0 0 15px #0002);
+    transition: 0.3s;
+}
+.prevSlide:hover{
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.prevSlide i{
+    color: #1DA31A;
+    font-size: 22px;
+}
+
+
+.nextSlide{
+    justify-content: center;
+    align-items: center;
+    width: 8%;
+    height: 85%;
+    background: #ECECEC;
+    border-radius: 0 10px 10px 0;
+    filter: drop-shadow(0 0 15px #0002);
+    transition: 0.3s;
+}
+.nextSlide:hover{
+    background: #FFFFFF;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.nextSlide i{
+    color: #1DA31A;
+    font-size: 22px;
+}
+
+
+.currentSlideLink{
+    width: 84%;
+    height: 100%;
+    z-index: 2;
+}
+.currentSlide{
+    width: 100%;
+    height: 100%;
+    background: #FFFFFF;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 25px #0004);
+    transition: 0.3s;
+}
+.currentSlide:hover{
+    filter: drop-shadow(0 0 25px #0005);
+    transition: 0.3s;
+}
+
+.currentSlide img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}

@@ -1,0 +1,141 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 16 Dec 2023, 00:44:02
+    Author     : Sandun
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Prompt', sans-serif;
+    scrollbar-width: thin;
+}
+
+/* SCROLLBAR PROPERTIES START ========================================= */
+*::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: #ababab;
+}
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #8f8f8f;
+}
+*::-webkit-scrollbar-thumb:active {
+    background-color: #7a7a7a;
+}
+/* =========================================== SCROLLBAR PROPERTIES END */
+
+
+html{
+    color: #242424;
+    background: #ECECEC;
+    scroll-behavior: smooth;
+}
+
+.flex{
+    display: flex;
+}
+.flexRow{
+    flex-direction: row;
+}
+.flexCol{
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    text-decoration-color: #1DA31A;
+}
+
+.containerBlock{
+    width: 100%;
+    height: auto;
+    color: #242424;
+    background: #ECECEC;
+    justify-content: center;
+}
+
+
+.loginForm{
+    width: 30%;
+    height: auto;
+    color: #242424;
+    background: #FFFFFF;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.formContainer{
+    width: 80%;
+    height: auto;
+    padding: 40px 0;
+    align-items: center;
+    gap: 20px;
+}
+
+.formLogo{
+    height: 50px;
+    width: auto;
+    margin-bottom: 40px;
+    cursor: pointer;
+}
+.formLogo img{
+    height: 100%;
+    width: auto;
+}
+
+.loginForm input{
+    width: calc(100% - 32px);
+    padding: 8px 16px;
+    background: #ECECEC;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.2s;
+}
+.loginForm input:focus{
+    border: 2px solid #1DA31A;
+    transition: 0.2s;
+}
+
+.loginForm button{
+    color: #ECECEC;
+    background: #1DA31A;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.loginForm button:hover{
+    background: #168C13;
+    transition: 0.3s;
+}
+
+.loginForm .stateMessage{
+    margin-bottom: 40px;
+    text-align: center;
+}
+.loginForm .stateMessage i{
+    color: #1DA31A;
+}
+
+.loginForm p{
+    width: 100%;
+}

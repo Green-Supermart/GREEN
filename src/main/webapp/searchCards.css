@@ -1,0 +1,94 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 18 Dec 2023, 01:08:53
+    Author     : Sandun
+*/
+
+header h1{
+    width: 70%;
+    text-align: center;
+}
+
+#resultKeyword{
+    color: #242424;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.searchCardsContainer{
+    gap: 30px;
+}
+
+.searchCard{
+    width: 100%;
+    height: 170px;
+    align-items: center;
+    justify-content: center;
+    background: #FFFFFF;
+    color: #242424;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 15px transparent);
+    transition: 0.3s;
+}
+
+.searchCard:hover{
+    filter: drop-shadow(0 0 15px #0001);
+    transition: 0.3s;
+}
+
+.searchCardContent{
+    height: 100%;
+    width: 85%;
+    justify-content: start;
+    gap: 30px;
+}
+
+.searchCardImg{
+    width: 170px;
+    height: 100%;
+}
+
+.searchCardImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px 0 0 10px;
+}
+
+.searchCardInfo{
+    width: auto;
+    justify-content: center;
+    gap: 18px;
+}
+
+.searchCardInfo a{
+    width: max-content;
+    color: #1DA31A;
+    text-decoration: none;
+    font-size: 12px;
+    align-items: center;
+    gap: 5px;
+}
+.searchCardInfo a i{
+    font-size: 8px;
+}
+
+.searchCardIcon{
+    color: #1DA31A;
+    background: transparent;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.searchCardIcon:hover{
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.searchCardIcon a{
+    color: #1DA31A;
+}
