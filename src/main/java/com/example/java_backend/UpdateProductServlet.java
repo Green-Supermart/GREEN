@@ -25,7 +25,7 @@ public class UpdateProductServlet extends HttpServlet {
         String productName = req.getParameter("productName");
         String category = req.getParameter("category");
         double originalPrice = Double.parseDouble(req.getParameter("originalPrice"));
-        int discountPercentage = Integer.parseInt(req.getParameter("discountPercentage"));
+        double discountPrice = Double.parseDouble(req.getParameter("discountPrice"));
         String stockStatus = req.getParameter("stockStatus");
         double quantity = Double.parseDouble(req.getParameter("quantity"));
         double sku = Double.parseDouble(req.getParameter("sku"));
@@ -34,14 +34,14 @@ public class UpdateProductServlet extends HttpServlet {
 
         try {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/greendb", "admin", "Admin123$");
-            String query = "UPDATE products SET productName = ?, category = ?, originalPrice = ?, discountPercentage = ?, stockStatus = ?, quantity = ?, sku = ?, imgLink = ? WHERE id = ?";
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/green", "root", "");
+            String query = "UPDATE products SET productName = ?, category = ?, originalPrice = ?, discountPrice = ?, stockStatus = ?, quantity = ?, sku = ?, imgLink = ? WHERE id = ?";
 
             PreparedStatement pstmt = conn.prepareStatement(query);
             pstmt.setString(1, productName);
             pstmt.setString(2, category);
             pstmt.setDouble(3, originalPrice);
-            pstmt.setInt(4, discountPercentage);
+            pstmt.setDouble(4, discountPrice);
             pstmt.setString(5, stockStatus);
             pstmt.setDouble(6, quantity);
             pstmt.setDouble(7, sku);

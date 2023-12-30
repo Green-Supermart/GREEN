@@ -27,7 +27,7 @@ public class AddProductServlet extends HttpServlet {
         String productDesc = req.getParameter("productDesc");
         String category = req.getParameter("category");
         double originalPrice = Double.parseDouble(req.getParameter("originalPrice"));
-        int discountPrice = Integer.parseInt(req.getParameter("discountPrice"));
+        double discountPrice = Double.parseDouble(req.getParameter("discountPrice"));
         String stockStatus = req.getParameter("stockStatus");
         double quantity = Double.parseDouble(req.getParameter("quantity"));
         double sku = Double.parseDouble(req.getParameter("sku"));
@@ -43,7 +43,7 @@ public class AddProductServlet extends HttpServlet {
             pstmt.setString(1, productName);
             pstmt.setString(2, category);
             pstmt.setDouble(3, originalPrice);
-            pstmt.setInt(4, discountPrice);
+            pstmt.setDouble(4, discountPrice);
             pstmt.setString(5, stockStatus);
             pstmt.setDouble(6, quantity);
             pstmt.setDouble(7, sku);

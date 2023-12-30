@@ -631,12 +631,65 @@ section ul li::before{
     font-weight: 400;
 }
 .linkContent h2{
-    font-size: 22px;
-    font-weight: 500;
+    font-size: 18px;
+    font-weight: 400;
 }
 .linkContent i{
     color: #1DA31A;
     font-size: 24px;
+}
+
+
+.proPicLink{
+    height: 290px;
+    width: 290px;
+    color: #242424;
+    background: #FFFFFF;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    filter: drop-shadow(0 0 15px transparent);
+    transition: 0.3s;
+}
+.proPicLink:hover{
+    filter: drop-shadow(0 0 15px #0001);
+    transition: 0.3s;
+}
+
+#proPicUpdate{
+    color: #242424;
+}
+#proPicUpdate:hover{
+    color: #1DA31A;
+    cursor: pointer;
+}
+
+.accountLink{
+    height: 130px;
+    width: 100%;
+    color: #242424;
+    background: #FFFFFF;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    filter: drop-shadow(0 0 15px transparent);
+    transition: 0.3s;
+}
+.accountLink:hover{
+    filter: drop-shadow(0 0 15px #0001);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.accountLink h1{
+    color: #1DA31A;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.accountLink h2{
+    font-size: 18px;
+    font-weight: 300;
 }
 
 

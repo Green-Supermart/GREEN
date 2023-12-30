@@ -23,7 +23,7 @@ public class DeleteProductServlet extends HttpServlet {
         // Delete the product from the database
         try (PrintWriter out = resp.getWriter()) {
             Class.forName("com.mysql.jdbc.Driver");
-            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/greendb", "admin", "Admin123$");
+            Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/green", "root", "");
 
             PreparedStatement ps = conn.prepareStatement("DELETE FROM products WHERE id = ?");
             ps.setInt(1, id);

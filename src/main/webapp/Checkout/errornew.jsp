@@ -45,7 +45,7 @@
                     </div>
                     
                     <p class="stateMessage">
-                        Order Cannot be Placed <i class="fa-solid fa-circle-exclamation" style="color: #00b33e;"></i> <br>
+                        <i class="fa-solid fa-circle-exclamation" style="color: #00b33e;"></i> Order Cannot be Placed<br>
                         Please be log in before placing an order.
                     </p>
                     

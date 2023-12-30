@@ -5,8 +5,8 @@
 --%>
 
 <%@ page import="java.sql.*" %>
-<%--<%@ page import="java.util.ArrayList" %>--%>
-<%--<%@ page import="org.json.JSONArray" %>--%>
+<%@ page import="java.util.ArrayList" %>
+<%@ page import="org.json.JSONArray" %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -248,64 +248,64 @@
 
                         <h1>Order Statistics</h1>
 
-<%--                        <div class="statChart">--%>
-<%--                            <canvas id="myChart"></canvas>--%>
+                        <div class="statChart">
+                            <canvas id="myChart"></canvas>
 
-<%--                            <%--%>
-<%--                                // Java code to connect to the database and fetch data--%>
-<%--                                ArrayList<String> dates = new ArrayList<>();--%>
-<%--                                ArrayList<Integer> orders = new ArrayList<>();--%>
-<%--                                try {--%>
-<%--                                    Class.forName("com.mysql.jdbc.Driver");--%>
-<%--                                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/greendb", "admin", "Admin123$");--%>
-<%--                                    Statement stmt = con.createStatement();--%>
-<%--                                    ResultSet rs = stmt.executeQuery("SELECT DATE_FORMAT(date, '%Y-%m-%d') AS OrderDate, COUNT(*) AS OrderCount FROM orders WHERE date >= CURDATE() - INTERVAL 7 DAY GROUP BY DATE(date)");--%>
-<%--                                    while(rs.next()) {--%>
-<%--                                        dates.add(rs.getString("OrderDate"));--%>
-<%--                                        orders.add(rs.getInt("OrderCount"));--%>
-<%--                                    }--%>
-<%--                                    con.close();--%>
-<%--                                } catch(Exception e) {--%>
-<%--                                    System.out.println();--%>
-<%--                                }--%>
-<%--                            %>--%>
+                            <%
+                                // Java code to connect to the database and fetch data
+                                ArrayList<String> dates = new ArrayList<>();
+                                ArrayList<Integer> orders = new ArrayList<>();
+                                try {
+                                    Class.forName("com.mysql.jdbc.Driver");
+                                    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/green", "root", "");
+                                    Statement stmt = con.createStatement();
+                                    ResultSet rs = stmt.executeQuery("SELECT DATE_FORMAT(date, '%Y-%m-%d') AS OrderDate, COUNT(*) AS OrderCount FROM orders WHERE date >= CURDATE() - INTERVAL 7 DAY GROUP BY DATE(date)");
+                                    while(rs.next()) {
+                                        dates.add(rs.getString("OrderDate"));
+                                        orders.add(rs.getInt("OrderCount"));
+                                    }
+                                    con.close();
+                                } catch(Exception e) {
+                                    System.out.println();
+                                }
+                            %>
 
-<%--                            <script>--%>
-<%--                                var ctx = document.getElementById('myChart').getContext('2d');--%>
-<%--                                var dateStrings = JSON.parse('<%= new JSONArray(dates) %>'); // convert the dates ArrayList to a JSON array--%>
-<%--                                var orderCounts = JSON.parse('<%= new JSONArray(orders) %>'); // convert the orders ArrayList to a JSON array--%>
-<%--                                var dates = dateStrings.map(function(dateString) {--%>
-<%--                                    return new Date(dateString + 'T00:00:00'); // convert the date strings to Date objects--%>
-<%--                                });--%>
-<%--                                var myChart = new Chart(ctx, {--%>
-<%--                                    type: 'bar',--%>
-<%--                                    data: {--%>
-<%--                                        labels: dates, // use the Date objects for the x-axis--%>
-<%--                                        datasets: [{--%>
-<%--                                            label: 'Orders',--%>
-<%--                                            data: orderCounts, // order counts for the y-axis--%>
-<%--                                            backgroundColor: 'rgba(29, 163, 26, 0.5)',--%>
-<%--                                            borderColor: 'rgba(29, 163, 26, 1)',--%>
-<%--                                            borderWidth: 2,--%>
-<%--                                            borderRadius: 10--%>
-<%--                                        }]--%>
-<%--                                    },--%>
-<%--                                    options: {--%>
-<%--                                        scales: {--%>
-<%--                                            x: {--%>
-<%--                                                type: 'time',--%>
-<%--                                                time: {--%>
-<%--                                                    unit: 'day'--%>
-<%--                                                }--%>
-<%--                                            },--%>
-<%--                                            y: {--%>
-<%--                                                beginAtZero: true--%>
-<%--                                            }--%>
-<%--                                        }--%>
-<%--                                    }--%>
-<%--                                });--%>
-<%--                            </script>--%>
-<%--                        </div>--%>
+                            <script>
+                                var ctx = document.getElementById('myChart').getContext('2d');
+                                var dateStrings = JSON.parse('<%= new JSONArray(dates) %>'); // convert the dates ArrayList to a JSON array
+                                var orderCounts = JSON.parse('<%= new JSONArray(orders) %>'); // convert the orders ArrayList to a JSON array
+                                var dates = dateStrings.map(function(dateString) {
+                                    return new Date(dateString + 'T00:00:00'); // convert the date strings to Date objects
+                                });
+                                var myChart = new Chart(ctx, {
+                                    type: 'bar',
+                                    data: {
+                                        labels: dates, // use the Date objects for the x-axis
+                                        datasets: [{
+                                            label: 'Orders',
+                                            data: orderCounts, // order counts for the y-axis
+                                            backgroundColor: 'rgba(29, 163, 26, 0.5)',
+                                            borderColor: 'rgba(29, 163, 26, 1)',
+                                            borderWidth: 2,
+                                            borderRadius: 10
+                                        }]
+                                    },
+                                    options: {
+                                        scales: {
+                                            x: {
+                                                type: 'time',
+                                                time: {
+                                                    unit: 'day'
+                                                }
+                                            },
+                                            y: {
+                                                beginAtZero: true
+                                            }
+                                        }
+                                    }
+                                });
+                            </script>
+                        </div>
 
                     </div>
                 </div>

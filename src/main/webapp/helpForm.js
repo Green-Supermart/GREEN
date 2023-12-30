@@ -10,15 +10,7 @@ const submitStateMsg = document.getElementById("submitStateMsg");
 window.addEventListener("load", function() {
     helpForm.addEventListener("submit", function(e) {
         e.preventDefault();
-        // append email to form data
-        const email = 'johndoe@mail.com';
         const form = e.target;
-        
-        const emailInput = document.createElement("input");
-        emailInput.setAttribute("type", "hidden");
-        emailInput.setAttribute("name", "Email");
-        emailInput.setAttribute("value", email);
-        form.appendChild(emailInput);
         
         // submit form data
         const data = new FormData(form);

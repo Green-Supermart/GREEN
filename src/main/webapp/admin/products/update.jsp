@@ -116,7 +116,7 @@
 
                                                 <div class="flex flexCol" style="width: 100%; gap: 8px;">
                                                     <label>Product Image</label>
-                                                    <input type="text" id="imgLink" style="width: calc(100% - 20px); font-weight: 300; color: #242424; background: #ECECEC; padding: 6px 10px; border-radius: 5px; border: 1px solid transparent; outline: none;" name="imgLink">
+                                                    <input type="text" id="imgLink" style="width: calc(100% - 20px); font-weight: 300; color: #242424; background: #ECECEC; padding: 6px 10px; border-radius: 5px; border: 1px solid transparent; outline: none;" name="imgLink" value="https://i.postimg.cc/brf9L1tT/placeholder.png">
                                                 </div>
 
                                             </div>
@@ -159,7 +159,7 @@
 
                                                     <div class="flex flexCol" style="width: 45%; gap: 8px;">
                                                         <label>Discount Price</label>
-                                                        <input type="number" id="discountPrice" style="width: calc(100% - 20px); font-weight: 300; color: #242424; background: #ECECEC; padding: 6px 10px; border-radius: 5px; border: 1px solid transparent; outline: none;" name="discountPrice" min="0" max="100" required>
+                                                        <input type="number" id="discountPrice" style="width: calc(100% - 20px); font-weight: 300; color: #242424; background: #ECECEC; padding: 6px 10px; border-radius: 5px; border: 1px solid transparent; outline: none;" name="discountPrice" min="0" required>
                                                     </div>
                                                 </div>
 

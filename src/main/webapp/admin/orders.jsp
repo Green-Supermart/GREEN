@@ -105,6 +105,7 @@
                                 <table>
                                     <tr>
                                         <th style="width: 5%;">ID</th>
+                                        <th style="width: 5%;">Date</th>
                                         <th style="width: 15%;">Order ID</th>
                                         <th style="width: 10%;">PID</th>
                                         <th style="width: 25%;">Email</th>
@@ -120,6 +121,7 @@
 
                                             while(rs.next()) {
                                                 int id = rs.getInt("id");
+                                                String date = rs.getString("date");
                                                 int orderID = rs.getInt("orderID");
                                                 int pid = rs.getInt("pid");
                                                 String userEmail = rs.getString("userEmail");
@@ -129,6 +131,7 @@
 
                                     <tr>
                                         <td><%= id %></td>
+                                        <td><%= date %></td>
                                         <td><%= orderID %></td>
                                         <td><%= pid %></td>
                                         <td><%= userEmail %></td>

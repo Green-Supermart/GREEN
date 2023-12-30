@@ -54,7 +54,7 @@ function navbarHTML() {
     html += '</form>';
     
     html += '<div class="actionIcons flex flexRow">';
-    html += '<a href="http://localhost:8090/wishlist.jsp" title="Wishlist">';
+    html += '<a href="/wishlist.jsp" title="Wishlist">';
     html += '<i class="fa-solid fa-heart"></i>';
     html += '</a>';
     html += '<div id="cartIcon" title="Show Cart (Alt + C)">';
@@ -80,7 +80,7 @@ function navbarHTML() {
     // 1 start
     html += '<div id="cartBackdrop" style="display: none; height: 100vh; width: 100%; background: #24242470; position: fixed; top: 0; left: 0; z-index: 20;">';
     // cartBox start
-    html += '<div id="cartBox" style="display: flex; position: fixed; top: 5px; right: 5px; height: calc(100vh - 10px); width: 400px; background: #ffffff; align-items: center; justify-content: center; z-index: 10; filter: drop-shadow(#00000011 0px 0px 15px); border-radius: 10px;">';
+    html += '<div id="cartBox" style="display: flex; position: fixed; top: 5px; right: 5px; height: calc(100vh - 10px); width: 400px; background: #ffffff; align-items: center; justify-content: center; z-index: 10; filter: drop-shadow(#0001 0px 0px 15px); border-radius: 10px;">';
     
     // cartBox content start
     html += '<div style="display: flex; flex-direction: column; justify-content: space-between; height: calc(100% - 40px); width: calc(100% - 40px);">';
