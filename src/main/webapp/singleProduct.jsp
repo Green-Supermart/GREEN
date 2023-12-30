@@ -66,7 +66,7 @@
                             <div class="flex flexRow" style="width: 100%; height: auto; align-items: center; justify-content: space-between;">
                                 <span class="flex flexCol" style="width: 80%; height: auto; gap: 5px;">
                                     <h1 id="productName" style="width: 100%; color: #1DA31A; font-size: 28px; font-weight: 500;">Product Title</h1>
-                                    <h2 style="width: 100%; color: #242424; font-size: 14px; font-weight: 300;">By Manufacturer</h2>
+                                    <h2 style="width: 100%; color: #242424; font-size: 14px; font-weight: 300;"><i style="color: #1DA31A; font-size: 12px;" class="fa-solid fa-medal"></i> Editors' Choice</h2>
                                 </span>
                                 
                                 <span class="flex flexRow" style="color: #1DA31A; font-size: 20px; align-items: center; gap: 35px;">
@@ -83,7 +83,7 @@
                                     </span>
                                 </span>
                             </div>
-                            
+
                             <div class="ratings flex flexCol" style="gap: 5px;">
                                 <span class="flex flexRow" style="align-items: center; gap: 10px;">
                                     <span class="flex flexRow" style="font-size: 12px; align-items: center; gap: 5px;">
@@ -93,15 +93,8 @@
                                         <i class="fa-solid fa-star" style="color: #1DA31A;"></i>
                                         <i class="fa-solid fa-star-half-stroke" style="color: #1DA31A;"></i>
                                     </span>
-                                    <span class="flex flexRow" style="font-size: 12px; align-items: center; gap: 5px;">
+                                    <span class="flex" style="font-size: 12px; align-items: center; gap: 5px;">
                                         <span>4.5</span>
-                                        <span>(2,000)</span>
-                                    </span>
-                                    
-                                    <span style="color: #1DA31A;">|</span>
-                                    
-                                    <span class="flex flexRow" style="font-size: 12px; font-weight: 300; align-items: center; gap: 5px;">
-                                        Your Rating:<span style="color: #1DA31A;">4.5</span>
                                     </span>
                                 </span>
                             </div>
@@ -133,10 +126,6 @@
                                     <i class="fa-solid fa-shopping-cart"></i> Add to Cart
                                 </button>
                             </span>
-                            
-                            <div class="productDesc">
-                                <p style="font-size: 14px; font-weight: 300; text-align: justify; text-align-last: left;">Laboris adipisicing non ex ea officia anim ad cillum cupidatat nulla occaecat nostrud. Commodo exercitation proident eu consequat sint duis eiusmod nulla fugiat nisi sunt. Enim pariatur sunt deserunt pariatur labore aute anim voluptate. Reprehenderit id amet nulla do duis sit irure dolore dolor ex dolor. Mollit ex eiusmod exercitation sit adipisicing ea. Aliquip do Lorem consequat sint. Irure cupidatat consectetur in irure in ad quis.</p>
-                            </div>
                             
                         </div>
                         

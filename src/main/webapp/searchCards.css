@@ -64,7 +64,7 @@ header h1{
     gap: 18px;
 }
 
-.searchCardInfo a{
+.searchCardInfo .category{
     width: max-content;
     color: #1DA31A;
     text-decoration: none;
@@ -72,7 +72,7 @@ header h1{
     align-items: center;
     gap: 5px;
 }
-.searchCardInfo a i{
+.searchCardInfo .category i{
     font-size: 8px;
 }
 

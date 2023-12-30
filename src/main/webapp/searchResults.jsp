@@ -4,6 +4,8 @@
     Author     : DELL
 --%>
 
+<%@ page import="java.sql.*" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -56,45 +58,81 @@
             <div class="container">
                 
                 <div class="searchCardsContainer flex flexCol" style="gap: 30px;">
-                    
+
+                    <%
+                        try {
+                            Class.forName("com.mysql.jdbc.Driver");
+                            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/green", "root", "");
+
+                            String searchKeyword = request.getParameter("q");
+
+                            String sql = "SELECT * FROM products WHERE productName LIKE ? OR category LIKE ?";
+                            PreparedStatement pstmt = con.prepareStatement(sql);
+
+                            pstmt.setString(1, "%" + searchKeyword + "%");
+                            pstmt.setString(2, "%" + searchKeyword + "%");
+
+                            ResultSet rs = pstmt.executeQuery();
+
+                            if (!rs.next()) {
+                    %>
+
+                    <div class="flex" style="height: 150px; width: 100%; color: #808080; background: #FFFFFF; justify-content: center; align-items: center; border-radius: 10px;">
+                        <p>There are no results for that keyword :(</p>
+                    </div>
+
+                    <%
+                    } else {
+                        // Results found, loop through and display them
+                        do {
+                            int id = rs.getInt("id");
+                            String productName = rs.getString("productName");
+                            String category = rs.getString("category");
+                            String imgLink = rs.getString("imgLink");
+                            int originalPrice = rs.getInt("originalPrice");
+                            int discountPrice = rs.getInt("discountPrice");
+                    %>
+
                     <div class="searchCard flex flexRow">
                         <div class="searchCardContent flex flexRow">
                             <div class="searchCardImg">
-                                <img src="https://i.postimg.cc/brf9L1tT/placeholder.png" alt="Product Image">
+                                <img src="<%= imgLink %>" alt="<%= productName %>">
                             </div>
                             
                             <div class="searchCardInfo flex flexCol">
-                                <a href="singleCategory.jsp" class="flex flexRow">
-                                    In Soaps <i class="fa-solid fa-chevron-right"></i>
-                                </a>
+                                <span class="category flex flexRow">
+                                    In <%= category %> <i class="fa-solid fa-chevron-right"></i>
+                                </span>
                                 
                                 <span class="flex flexCol" style="gap: 6px;">
-                                    <h1 style="font-size: 18px; font-weight: 400;">Pears Baby Soap Venivel & Turmeric</h1>
+                                    <h1 style="font-size: 18px; font-weight: 400;"><%= productName %></h1>
                                     
                                     <span class="flex flexRow" style="font-size: 10px; align-items: center; gap: 15px;">
-                                        <h2 style="color: #1DA31A; font-size: 14px; font-weight: 400;">Rs. 152.00</h2>
-                                        <h2 style="color: #808080; text-decoration-color: #808080; text-decoration-line: line-through; text-decoration-thickness: 1.5px;">Rs. 190.00</h2>
+                                        <h2 style="color: #1DA31A; font-size: 14px; font-weight: 400;">Rs. <%= discountPrice %></h2>
+                                        <h2 style="color: #808080; text-decoration-color: #808080; text-decoration-line: line-through; text-decoration-thickness: 1.5px;">Rs. <%= originalPrice %></h2>
                                     </span>
                                 </span>
                             </div>
                         </div>
                         
-                        <div class="flex flexRow" style="width: 15%; height: 100%; gap: 18%; justify-content: start; align-items: center; color: #1DA31A; font-size: 18px;">
-                            <span class="searchCardIcon flex" title="Add to Wishlist">
-                                <i class="fa-solid fa-heart"></i>
-                            </span>
-                            
-                            <span class="searchCardIcon flex" title="Add to Cart">
-                                <i class="fa-solid fa-shopping-cart"></i>
-                            </span>
-                            
+                        <div class="flex flexRow" style="width: 15%; height: 100%; gap: 18%; justify-content: center; align-items: center; color: #1DA31A; font-size: 18px;">
                             <span class="searchCardIcon flex" title="View Product">
-                                <a href="singleProduct.jsp">
+                                <a href="/singleProduct.jsp?productId=<%= id %>">
                                     <i class="fa-solid fa-square-arrow-up-right"></i>
                                 </a>
                             </span>
                         </div>
                     </div>
+
+                    <%
+                                } while (rs.next());
+                            }
+
+                            con.close();
+                        } catch (Exception e) {
+                            e.printStackTrace();
+                        }
+                    %>
 
                 </div>
                 
