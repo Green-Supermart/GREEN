@@ -67,7 +67,6 @@ function navbarHTML() {
     
     html += '<div id="userDropdown" class="userDropdown">';
     html += '<a id="accountSettingsLink" href="/getUserData">Account Settings</a>';
-    html += '<a id="ordersLink" href="/orders.jsp">Orders</a>';
     html += '<a id="helpCenterLink" href="/helpCenter.jsp">Help Center</a>';
     html += '<a id="registerLink" href="/register.jsp">Register</a>';
     html += '<a id="loginLink" href="/login.jsp">Login</a>';

@@ -73,14 +73,6 @@
                                     <span style="display: none;" title="Remove From Wishlist">
                                         <i class="fa-solid fa-heart"></i>
                                     </span>
-                                    
-                                    <span title="Add to Wishlist">
-                                        <i class="fa-regular fa-heart"></i>
-                                    </span>
-                                    
-                                    <span title="Share">
-                                        <i class="fa-solid fa-share-nodes"></i>
-                                    </span>
                                 </span>
                             </div>
 
